@@ -52,6 +52,19 @@ document.addEventListener("mousemove", (e) => {
     }, { duration: 200, fill: 'forwards' });
 })
 
+$(document).mouseenter((e) => {
+    gsap.to(".custom-cursor", {
+        scale: 1,
+        duration: 0.01
+    })
+})
+$(document).mouseleave((e) => {
+    gsap.to(".custom-cursor", {
+        scale: 0,
+        duration: 0.01
+    })
+})
+
 $(".nav-link , #logo, .custom-btn-3 , .like, .certificate, .inner-contain>h4 , .my-link , .phn>a, #menu-icon, #close>i").mousemove((e) => {
     gsap.to(".custom-cursor", {
         scale: 3,
